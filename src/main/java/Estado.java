@@ -16,7 +16,12 @@ class Nueva implements Estado {
 }
 
 class Promocion implements Estado {
-  Double descuento;
+  double descuento;
+
+  public Promocion(double unDescuento) {
+    descuento = unDescuento;
+  }
+
   public double precioFinal(double precioPrenda) { return precioPrenda - descuento; }
 }
 
