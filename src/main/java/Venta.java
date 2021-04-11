@@ -63,6 +63,6 @@ class VentaPorTarjeta extends Venta {
  * */
   @Override
   public double total() {
-    return cantidadCuotas * coeficienteTarjeta + 0.01 * super.total() + super.total();
+    return cantidadCuotas * coeficienteTarjeta + 0.01 * super.total();
   }
 }
