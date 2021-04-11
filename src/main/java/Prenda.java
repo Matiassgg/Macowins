@@ -4,9 +4,9 @@
 public class Prenda {
   Estado estado;
   double precioBase;
-  String tipoPrenda;
+  TipoPrenda tipoPrenda;
 
-  public Prenda(Estado unEstado, double unPrecioBase, String tipo) {
+  public Prenda(Estado unEstado, double unPrecioBase, TipoPrenda tipo) {
     estado = unEstado;
     precioBase = unPrecioBase;
     tipoPrenda = tipo;
@@ -17,6 +17,10 @@ public class Prenda {
    */
   public double precioVenta() {
     return estado.precioFinal(precioBase);
+  }
+
+  public void estado(Estado nuevoEstado) {
+    estado = nuevoEstado;
   }
 }
 
