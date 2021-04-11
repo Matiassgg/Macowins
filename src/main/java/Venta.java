@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 /**
  * <b>Representa un venta en efectivo de alguna prenda de cualquier tipo</b>.
 */
-public abstract class Venta {
+public class Venta {
   List<Prenda> prendasVendidas = new ArrayList<>();
   Date fecha;
 
@@ -57,10 +57,10 @@ class VentaPorTarjeta extends Venta {
     cantidadCuotas = cuotas;
     coeficienteTarjeta = coeficiente;
   }
-/**
- * El total de la venta se base en un recargo extra
- * @return La ganancia de la venta
- * */
+  /**
+   * El total de la venta se base en un recargo extra
+   * @return La ganancia de la venta
+   * */
   @Override
   public double total() {
     return cantidadCuotas * coeficienteTarjeta + 0.01 * super.total();
