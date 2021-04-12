@@ -14,11 +14,15 @@ public class Prenda {
 
   /**
    * <b>Precio de venta según estado de la prenda</b>
+   * @return Precio final de la prenda
    */
   public double precioVenta() {
     return estado.precioFinal(precioBase);
   }
 
+  /**
+   * <b>Este método permite el cambio de estado de las prendas</b>
+   */
   public void estado(Estado nuevoEstado) {
     estado = nuevoEstado;
   }

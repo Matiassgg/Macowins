@@ -6,6 +6,9 @@
  * <b>Se decidió usar composición</b>
  */
 public interface Estado {
+  /**
+   * @return Precio modificado de la prenda en base a su estado
+   */
   double precioFinal(double precioPrenda);
 }
 
@@ -22,7 +25,9 @@ class Promocion implements Estado {
     descuento = unDescuento;
   }
 
-  public double precioFinal(double precioPrenda) { return precioPrenda - descuento; }
+  public double precioFinal(double precioPrenda) {
+    return precioPrenda - descuento;
+  }
 }
 
 class Liquidacion implements Estado {
