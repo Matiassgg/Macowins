@@ -12,7 +12,6 @@ public class Negocio {
 
   /**
    * <b>Es la ganancia del negocio para una cierta fecha</b>
-   * @param fecha
    */
   public double ganancias(Date fecha) {
     return ventas
